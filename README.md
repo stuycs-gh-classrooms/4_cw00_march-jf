@@ -28,7 +28,7 @@ The objects with a gray borders around  are being highlighted by the edge detect
 
 #### Question 1
 What information that was part of the original image has been lost via edge detection?
-
+The border of the red states are lost. The concentrated red area distorted the edge detection. 
 
 
 #### Question 2
@@ -39,12 +39,12 @@ YOUR ANSWER HERE (delete this line)
 #### Question 3
 What information that was part of the original image has been lost via grayscale conversion?
 
-YOUR ANSWER HERE (delete this line)
+The graysclae shows the variations of the different colors used to highlight certain areas. The grayscale version perserves the concentration of a color on an area. 
 
 #### Question 4
 In a temperature map, it is often useful to highlight particular temperature ranges. If you wanted to focus on higher temperatures, you might want to find a way to programatically highlight regions that are more red than others. Come up with an algorithm that would process the image such that the red regions are more prominent.
 
-YOUR ANSWER HERE (delete this line)
+Use grayscale and then add a red tint to the image. That way, the areas that are grayer will also be more red. 
 
 ---
 
