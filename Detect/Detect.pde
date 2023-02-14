@@ -48,14 +48,17 @@ void keyPressed() {
     art = loadImage(PICFILE);
     art.loadPixels();
   }//reset image
+  else if (key == 'g'){
+    art = grayscale(art);
+  }
 }//keyPressed
 
 
 /*================================
   Returns the grayScale value of a color
 ================================*/
-int calculateGray(color c) {
-  int g = int((red(c) + green(c) + blue(c)))/3;
+float calculateGray(color c) {
+  float g = int((red(c) + green(c) + blue(c)))/3;
   return g;
 }//calculateGray
 /*================================
@@ -65,9 +68,27 @@ int getIndexFromXY(int x, int y, PImage img) {
   return y * img.width + x;
 }//getIndexFromXY
 
+PImage grayscale(PImage img){
+  PImage newImg = new PImage(img.width, img.height);
+  newImg.loadPixels();
+  for ( int p = 0; p < img.pixels.length; p++){
+    color c = img.pixels[p];
+    newImg.pixels[p] = color((calculateGray(c)));
+    //println(c);
+ }
+  newImg.updatePixels();
+  return newImg;
+}//grayscale
 
 PImage highlightRed(PImage img) {
   PImage newImg = new PImage(img.width, img.height);
+  newImg.loadPixels();
+  for ( int p = 0; p < img.pixels.length; p++){
+    color c = img.pixels[p];
+    newImg.pixels[p] = color(calculateGray(c)/255*red(c),0,0);
+    //println(c);
+ }
+  newImg.updatePixels();
   return newImg;
 }//higlightRed
 
