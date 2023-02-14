@@ -24,12 +24,12 @@ Based on the images above, answer the following questions.
 #### Question 0
 What parts of the original map are being highlighted by the edge detection algorithm?
 
-YOUR ANSWER HERE (delete this line)
+The objects with a gray borders around  are being highlighted by the edge detection algorithm.
 
 #### Question 1
 What information that was part of the original image has been lost via edge detection?
 
-YOUR ANSWER HERE (delete this line)
+
 
 #### Question 2
 What information is present in the grascale version that is not in the edge detected version?
